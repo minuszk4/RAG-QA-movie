@@ -78,7 +78,6 @@ class MovieChatbot:
 Người dùng hỏi: "{query}"
 Danh sách phim gợi ý:
 {movie_list}
-Hãy viết câu trả lời tự nhiên, thân thiện giới thiệu phim cho người dùng.
 """
 
         try:

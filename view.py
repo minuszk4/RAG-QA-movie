@@ -1,4 +1,4 @@
-from flask import Flask, request, jsonify
+from flask import Flask, request, jsonify, render_template
 from flask_cors import CORS
 from AI.AI_QA import MovieChatbot
 
@@ -6,7 +6,9 @@ app = Flask(__name__)
 CORS(app)
 
 chatbot = MovieChatbot()
-
+@app.route("/")
+def home():
+    return render_template("index.html")
 @app.route("/ask", methods=["POST"])
 def ask():
     data = request.json
